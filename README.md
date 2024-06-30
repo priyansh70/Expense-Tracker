@@ -18,7 +18,7 @@ The Expense Tracker is a simple and intuitive web application that allows users 
 
 ## Demo
 
-expense-tracker-livid-seven.vercel.app
+[expense-tracker-livid-seven.vercel.app](expense-tracker-livid-seven.vercel.app)
 
 ## Technologies Used
 
