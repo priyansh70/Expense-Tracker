@@ -13,16 +13,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  box-sizing: border-box;
+  background-color: #f5ae9b;
   width: 100%;
   height: 100vh;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 button {
-  padding: 7px 20px;
+  padding: 7px 15px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -36,6 +37,7 @@ button:hover {
 
 /* app styles */
 .app {
+  min-width: 500px;
   max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
@@ -58,6 +60,10 @@ h1 {
   margin-bottom: 10px;
 }
 
+.space-between div span {
+  font-weight: bold;
+}
+
 /* Expense Form styles */
 .expense-form {
   background-color: #f9f9f9;
@@ -66,34 +72,103 @@ h1 {
   border-radius: 8px;
 }
 
-.expense-form form {
+.expense-form form .fields {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.expense-form label {
+.expense-form .fields label {
   margin-bottom: 5px;
   color: #333;
 }
 
-.expense-form input[type="text"],
-.expense-form input[type="number"] {
+.expense-form .fields label span {
+  color: red;
+}
+
+.expense-form .fields input[type="text"],
+.expense-form .fields input[type="number"] {
   padding: 8px;
-  margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-/* Filter styles */
-.filter {
-  margin-bottom: 20px;
+.expense-form .fields p {
+  font-size: 12px;
+  color: red;
 }
 
-.filter input[type="text"] {
+/* Filter styles */
+
+/* .filter input[type="text"] {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
   width: 100%;
+  margin-bottom: 10px;
+} */
+
+/* Container styling */
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Input styling */
+.filter input[type="text"] {
+  padding: 4px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Label styling */
+.filter div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.filter div label {
+  font-size: 14px;
+  padding: 4px;
+}
+
+/* Select dropdown styling */
+.filter div select {
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter div select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Option styling */
+.filter div select option {
+  padding: 4px;
+  font-size: 14px;
 }
 
 /* Expense List styles */
@@ -103,7 +178,7 @@ h1 {
   border-radius: 8px;
 }
 
-.expense-list h2 {
+.expenses h2 {
   margin-bottom: 10px;
   color: #555;
 }
@@ -115,6 +190,8 @@ h1 {
 .expense-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 20px;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -124,7 +201,6 @@ h1 {
 }
 
 .expense-item .description {
-  flex-grow: 1;
   color: #333;
 }
 
