@@ -18,7 +18,7 @@ The Expense Tracker is a simple and intuitive web application that allows users 
 
 ## Demo
 
-Include a link to a live demo if available.
+expense-tracker-livid-seven.vercel.app
 
 ## Technologies Used
 
@@ -60,6 +60,7 @@ expense-tracker/
 │   │   ├── ExpenseForm.js
 │   │   ├── ExpenseList.js
 │   │   └── ExpenseItem.js
+│   │   └── Button.js
 │   │
 │   ├── App.css
 │   ├── index.js
