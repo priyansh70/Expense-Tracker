@@ -1,7 +1,3 @@
-Sure! Here's the content for your `README.md` file:
-
----
-
 # Expense Tracker
 
 ## Overview
