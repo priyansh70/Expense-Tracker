@@ -43,7 +43,12 @@ function App() {
         <div>
           Expense <span>${totalAmount}</span>
         </div>
-        <Button onclick={() => setAddExpense((addExpense) => !addExpense)}>
+        <Button
+          onclick={() => {
+            setAddExpense((addExpense) => !addExpense);
+            setSearchQuery("");
+          }}
+        >
           {addExpense ? "CLOSE" : "ADD"}
         </Button>
       </div>
